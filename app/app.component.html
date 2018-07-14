@@ -1,0 +1,59 @@
+
+<div style="text-align: center">
+<h1>Assignment 7.3</h1>
+
+<h2>Car Details</h2>
+<form class="example-form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+  
+  <div class="form-group">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Car Name" value="" #nameRef="ngModel" required class="form-control" name = "name" ngModel>
+    <div *ngIf="userForm.controls['name'].hasError('required')" class="alert alert-danger">
+      Please enter a name
+    
+      </div>
+     
+    <mat-hint>Please enter Car name</mat-hint>
+  </mat-form-field>
+  </div>
+  
+  <div>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Car type" value="">
+    <mat-hint>Please enter car type</mat-hint>
+    
+  </mat-form-field>
+  </div>
+
+  <div>
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Color" value="">
+      <mat-hint>Please enter car color</mat-hint>
+    </mat-form-field>
+  </div>
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Car Number" value="" #nameRef="ngModel" required class="form-control" name = "carnumber" ngModel>
+        <mat-hint>Please enter car Number</mat-hint>
+        <div *ngIf="userForm.controls['carnumber'].hasError('required')" class="alert alert-danger">
+          Please enter a car number
+        
+          </div>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="No. of Seats" value="">
+          <mat-hint>Please enter No. of seats</mat-hint>
+        </mat-form-field>
+      </div>
+
+<br>
+<br>
+<button mat-raised-button color="primary" class="btn btn-primary">Submit</button>
+
+
+</form>
+</div>
